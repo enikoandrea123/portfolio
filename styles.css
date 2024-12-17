@@ -2,22 +2,22 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #444;
-    background-color: #fefaf6;
+    background-color: #fdf9f5; /* Soft creamy light brown */
+    color: #5a4e42; /* Muted brown for text */
     line-height: 1.6;
     scroll-behavior: smooth;
 }
 
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
 
-/* Hero Section */
+/* Hero Section with Draped Satin Fabric Background */
 .hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: url('background.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -25,32 +25,36 @@ body {
     color: #fff;
     text-align: center;
     position: relative;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     padding: 2em;
     border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .hero h1 {
     font-size: 3em;
-    margin-bottom: 0.5em;
+    color: #f2a5a1;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
 .hero .btn {
     display: inline-block;
     padding: 0.8em 2em;
-    background: #ff007f;
+    background: #f2a5a1;
     color: #fff;
     text-decoration: none;
     border-radius: 25px;
     margin-top: 1em;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .hero .btn:hover {
-    background: #d4006e;
+    background: #d18580;
+    transform: translateY(-5px);
 }
 
 /* About Section */
@@ -59,33 +63,76 @@ body {
     background: #fff;
 }
 
-/* Portfolio Section */
-.portfolio {
+/* Fashion Section */
+.fashion {
     padding: 4em 0;
+    background: #f1e2d1; /* Soft pastel beige */
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
 }
 
-.gallery img {
-    width: 100%;
+.card {
+    background: #fff;
     border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.card img {
+    width: 100%;
+    border-radius: 15px;
 }
 
-/* Testimonials */
-.testimonials {
-    padding: 4em 0;
-    background: #ff007f;
+.card-content {
+    padding: 1.5em;
+    background: #f9e6e0;
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.fashion .btn {
+    background: #f2a5a1;
     color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 0.8em 2em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.fashion .btn:hover {
+    background: #d18580;
+    transform: translateY(-5px);
+}
+
+/* Videos Section */
+.videos {
+    padding: 4em 0;
+    background: #fff;
+}
+
+/* Collaborations Section */
+.collaborations {
+    padding: 4em 0;
+    background: #f7d7c4; /* Soft light beige */
+}
+
+.collab-logos img {
+    margin: 1em;
+    max-width: 150px;
+    transition: transform 0.3s;
+}
+
+.collab-logos img:hover {
+    transform: scale(1.1);
 }
 
 /* Contact Section */
@@ -95,8 +142,13 @@ body {
 }
 
 .contact a {
-    color: #ff007f;
+    color: #f2a5a1;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact a:hover {
+    color: #d18580;
 }
 
 footer {
