@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #fdf9f5; /* Soft creamy light brown */
-    color: #5a4e42; /* Muted brown for text */
+    background-color: #f3ece7; /* Soft neutral beige */
+    color: #5a4e42; /* Deep muted brown for text */
     line-height: 1.6;
     scroll-behavior: smooth;
 }
@@ -15,145 +15,571 @@ body {
     text-align: center;
 }
 
-/* Hero Section with Draped Satin Fabric Background */
+/* Hero Section Enhancements */
 .hero {
     background: url('background.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     color: #fff;
     text-align: center;
-    position: relative;
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 1;
 }
 
 .hero-content {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 2em;
-    border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 250, 245, 0.9);
+    padding: 2em 3em;
+    border-radius: 20px;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    backdrop-filter: blur(10px);
 }
 
 .hero h1 {
-    font-size: 3em;
-    color: #f2a5a1;
-    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    font-size: 3.5em;
+    font-family: 'Playfair Display', serif;
+    color: #8c6b52;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.1em;
+    font-family: 'Poppins', sans-serif;
+    color: #5a4e42;
+    margin-bottom: 1.5em;
 }
 
 .hero .btn {
     display: inline-block;
     padding: 0.8em 2em;
-    background: #f2a5a1;
+    background: linear-gradient(135deg, #a5846a, #8c6b52);
     color: #fff;
+    font-size: 1em;
     text-decoration: none;
-    border-radius: 25px;
-    margin-top: 1em;
-    transition: background 0.3s, transform 0.3s;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .hero .btn:hover {
-    background: #d18580;
+    background: linear-gradient(135deg, #8c6b52, #704c3b);
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* About Section */
 .about {
     padding: 4em 0;
-    background: #fff;
+    background: #f8f5f2; /* Light neutral background */
+    color: #6d5c4b; /* Rich brown text */
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 2em;
+    background: #fff; /* White background for contrast */
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular profile image */
+    border: 4px solid #d3c2b6; /* Subtle border */
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    font-family: 'Playfair Display', serif;
+    color: #8c6b52;
+    margin-bottom: 0.5em;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+    color: #5a4e42;
+}
+
+.about-text strong {
+    color: #8c6b52;
+}
+
+.about-text .btn {
+    display: inline-block;
+    padding: 0.8em 2em;
+    background: linear-gradient(135deg, #a5846a, #8c6b52);
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.about-text .btn:hover {
+    background: linear-gradient(135deg, #8c6b52, #704c3b);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Fashion Section */
+/* Fashion Section Styling */
 .fashion {
-    padding: 4em 0;
-    background: #f1e2d1; /* Soft pastel beige */
+    padding: 5em 0;
+    background: #e9ddd2; /* Soft pastel beige */
+    font-family: 'Poppins', sans-serif;
+    color: #5a4e42; /* Deep neutral brown */
 }
 
+/* Section Header Styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #8c6b52; /* Rich brown */
+    margin-bottom: 0.5em;
+}
+
+.section-header p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #6d5c4b;
+}
+
+/* Gallery Grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
 }
 
+/* Card Styling */
 .card {
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.card-content {
-    padding: 1.5em;
-    background: #f9e6e0;
-    border-radius: 15px;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.fashion .btn {
-    background: #f2a5a1;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 25px;
+/* Card Image */
+.card-image {
+    height: 550px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+/* Card Content */
+.card-content {
+    padding: 1.5em;
+    text-align: center;
+    background: #f2e7dd;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    color: #8c6b52;
+    margin-bottom: 0.5em;
+}
+
+.card-content p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #6d5c4b;
+}
+
+/* Button Styling */
+.btn-container {
+    text-align: center;
+    margin-top: 3em;
+}
+
+.btn {
+    display: inline-block;
     padding: 0.8em 2em;
-    transition: background 0.3s, transform 0.3s;
+    background: linear-gradient(135deg, #a5846a, #8c6b52);
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-.fashion .btn:hover {
-    background: #d18580;
+.btn:hover {
+    background: linear-gradient(135deg, #8c6b52, #704c3b);
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Videos Section */
 .videos {
     padding: 4em 0;
-    background: #fff;
+    background: #f3ece7; /* Light neutral background */
 }
 
 /* Collaborations Section */
+/* Collaborations Section Styling */
+.collaborations {
+    padding: 5em 0;
+    background: #d8c7b7; /* Warm beige background */
+    color: #5a4e42; /* Rich brown text */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Section Header */
+/* Collaboration Section */
+/* Collaboration Section */
 .collaborations {
     padding: 4em 0;
-    background: #f7d7c4; /* Soft light beige */
+    background: #d8c7b7; /* Warm beige background */
+    color: #5a4e42; /* Rich brown */
 }
 
-.collab-logos img {
+/* Logo Cards */
+.logo-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 180px;
     margin: 1em;
-    max-width: 150px;
-    transition: transform 0.3s;
 }
 
-.collab-logos img:hover {
+/* Make the link inside the card not underlined */
+.logo-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Make the text inherit color from parent */
+    display: block; /* Make the whole card clickable */
+}
+
+/* Logo Image */
+.logo-image img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin-bottom: 1em; /* Space between image and title */
+}
+
+/* Logo Title */
+.logo-title {
+    background: #f2e7dd; /* Light neutral brown */
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 100%;
+    max-width: 150px;
+}
+
+.logo-title h3 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #5a4e42; /* Rich brown for text */
+    margin: 0;
+}
+
+/* Brand Description */
+.brand-description {
+    font-size: 0.005em; /* Smaller text */
+    color: #7a6f5d; /* Slightly lighter brown */
+    text-align: justify-all;
+    margin-top: 1em;
+    line-height: 1.5;
+}
+
+/* Hover Effect for Logo Card */
+.logo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.logo-card:hover .logo-image img {
     transform: scale(1.1);
 }
 
+/* Flexbox for Aligning Logos in a Row */
+.collab-logos {
+    display: flex;
+    flex-wrap: wrap; /* Allows the logos to wrap onto the next line on small screens */
+    justify-content: center; /* Centers the logos horizontally */
+    gap: 2em; /* Adds space between logos */
+}
+
+/* Contact Section */
 /* Contact Section */
 .contact {
-    padding: 4em 0;
-    background: #fff;
+    padding: 6em 0;
+    background: #f5f3e7; /* Soft off-white background */
+    color: #4f4a38; /* Rich brown color for text */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    border-top: 5px solid #a88e6d; /* Elegant border at the top */
 }
 
-.contact a {
-    color: #f2a5a1;
+/* Section Header */
+.contact .section-header h2 {
+    font-size: 3.2em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    color: #3c3222; /* Darker shade for heading */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contact .section-header p {
+    font-size: 1.3em;
+    color: #7c6e59; /* Light brown-gray text */
+    margin-bottom: 3em;
+    font-weight: 500;
+}
+
+/* Contact Info Styling */
+.contact-info p {
+    font-size: 1.2em;
+    color: #4f4a38;
+    margin-bottom: 1.5em;
+    font-weight: 400;
+}
+
+/* Contact Info Link Styling */
+.contact-info a {
+    color: #a88e6d; /* Warm brown link color */
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.contact a:hover {
-    color: #d18580;
+.contact-info a:hover {
+    color: #7d6b53; /* Darker brown when hovered */
+}
+
+/* Social Icons Row */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3em; /* Increased space between icons */
+    margin-top: 2.5em;
+    padding: 1.5em 0;
+}
+
+/* Social Icon Styling */
+.social-icons a {
+    font-size: 3em; /* Larger icons for impact */
+    color: #8e7b5f; /* Warm brown for icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #7d6b53; /* Darker brown when hovered */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .contact-info p {
+        font-size: 1.1em; /* Smaller text on mobile */
+    }
+
+    .social-icons a {
+        font-size: 2.5em; /* Adjust icon size for mobile */
+    }
+}
+
+/* Footer */
+/* Section Header Styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #8c6b52; /* Rich brown */
+    margin-bottom: 0.5em;
+}
+
+.section-header p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #6d5c4b;
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: #5a4e42; /* Deep brown */
+    color: #f3ece7; /* Light beige text */
     text-align: center;
     padding: 1em;
+}
+
+/* TikTok Video Section */
+.videos {
+    padding: 4em 0;
+    background: #f3ece7; /* Light neutral background */
+}
+
+/* Section Header Styling */
+.container h2 {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #8c6b52; /* Rich brown */
+    margin-bottom: 0.5em;
+}
+
+.container p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #6d5c4b;
+}
+
+/* Video Section Description */
+.videos-description {
+    font-size: 1.1em;
+    color: #6d5c4b;
+    text-align: center;
+    margin-bottom: 2em;
+    font-weight: 300;
+}
+
+/* Video Embeds */
+.video-embeds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.tiktok-video {
+    background: #f8f5f2; /* Light neutral background */
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    flex: 1 1 calc(20% - 2em);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 500px;
+}
+
+.tiktok-video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+/* Video Description */
+.video-description {
+    font-size: 0.9em;
+    color: #7a6c59;
+    margin-top: 1em;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Hover Effect for Video Cards */
+.tiktok-video:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Style */
+.btn-more {
+    display: inline-block;
+    padding: 0.8em 2em;
+    background-color: #a5846a;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-more:hover {
+    transform: translateY(-5px);
+    background-color: #8c6b52;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .tiktok-video {
+        flex: 1 1 calc(30% - 2em);
+    }
+}
+
+@media (max-width: 768px) {
+    .tiktok-video {
+        flex: 1 1 100%;
+    }
 }
